@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Simple</h1><hr />
+
+    <?e lists:map(fun(File) -> {ok, Data} = file:read_file(File), markdown:conv(binary:bin_to_list(Data)) end, filelib:wildcard("*.md")) ?>
+
+    <hr /><i><?e Req:magic() ?></i>
+  </body>
+</html>
