@@ -41,8 +41,8 @@
           <a class="brand" href="index.ehe">Simple</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="index.ehe">Home</a></li>
-              <li><a href="about.ehe">About</a></li>
+              <li><a href="index.ehe">Home</a></li>
+              <li class="active"><a href="about.ehe">About</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -50,7 +50,7 @@
     </div>
 
     <div class="container">
-      <?e lists:map(fun(File) -> case file:read_file(File) of {ok, Data} -> markdown:conv(binary:bin_to_list(Data)); {error, Reason} -> "error" end end, filelib:wildcard("*.md")) ?>
+      <?e simple:render("about.md") ?>
     </div> <!-- /container -->
 
     <!-- Le javascript

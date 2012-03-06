@@ -1,7 +1,7 @@
 Erlang markdown blog engine
 ===============
 
-[EHE] (https://github.com/joearms/adapter_pattern) usage example.
+[EHE](https://github.com/joearms/adapter_pattern) usage example.
 
 Download
 -----------
@@ -21,4 +21,4 @@ Usage
        or: erl -noshell -s server start mochiweb_adapter
        or: erl -noshell -s server start misultin_adapter
 
-View the site at http://localhost:1234/index.ehe
+View the site at [http://localhost:1234/index.ehe](http://localhost:1234/index.ehe)
