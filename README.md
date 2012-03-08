@@ -2,6 +2,7 @@ Erlang markdown blog engine
 ===============
 
 [EHE](https://github.com/joearms/adapter_pattern) usage example.
+View the example at [http://simpler.herokuapp.com/index.ehe](http://simpler.herokuapp.com/index.ehe)
 
 Download
 -----------
@@ -12,13 +13,12 @@ Install
 -------
 
     cd simple
-    make
+    rebar get-deps
+    rebar compile
 
 Usage
 -----
 
-    usage: erl -noshell -s server start cowboy_adapter
-       or: erl -noshell -s server start mochiweb_adapter
-       or: erl -noshell -s server start misultin_adapter
+    erl -pa ebin deps/*/ebin -noshell -s simple_app
 
 View the site at [http://localhost:1234/index.ehe](http://localhost:1234/index.ehe)

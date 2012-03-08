@@ -2,11 +2,15 @@
 -compile(export_all).
 -import(lists, [reverse/1]).
 
+start_link() ->
+  start([mochiweb_adapter]).
+
 start([Mod]) ->
-    Port = 1234,
+    Port = list_to_integer(os:getenv("PORT")),
+    %Port = 1234,
     Z = Mod:start_link([{port, Port}, 
 			{handler, fun handle_request/1}]),
-    io:format("Server started with ~w~n",[Mod]),
+    io:format("Server started with ~w on ~w~n",[Mod, Port]),
     receive
 	after
 	    infinity ->
@@ -40,4 +44,4 @@ handle([File], _, R) ->
   end;
 
 handle(X, Args, R) ->
-  R:send_data(html, R:pre({funny,X,Args})).
+  R:send_data(html, "ok").
