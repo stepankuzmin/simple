@@ -19,6 +19,11 @@ set_attribute(Article, date, Date) -> Article#article{date = Date};
 set_attribute(Article, title, Title) -> Article#article{title = Title}; 
 set_attribute(Article, _, _) -> Article#article{}.
 
+render(Article) ->
+  ["<h1>" ++ get_title(Article) ++ "</h1>", 
+    "<strong>" ++ get_date(Article) ++ "</strong>",
+    "<p>" ++ get_content(Article) ++ "</p>"].
+
 parse(File) ->
   case file:read_file(File) of
     {ok, Data} -> 

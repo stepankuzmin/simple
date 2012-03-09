@@ -64,8 +64,6 @@
 
       <?e simple:render("README.md") ?>
 
-      <?e article:test() ?>
-
     </div> <!-- /container -->
 
     <!-- Le javascript

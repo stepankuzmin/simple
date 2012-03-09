@@ -62,7 +62,7 @@
 
     <div class="container">
 
-      <?e lists:map(fun(Article) -> "<h1>" ++ article:get_title(Article) ++ "</h1>" end, 
+      <?e lists:map(fun(Article) -> article:render(Article) end, 
             lists:map(fun(File) -> article:parse(File) end, 
               filelib:wildcard("articles/*.md"))) ?>
 
