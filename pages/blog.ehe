@@ -62,9 +62,9 @@
 
     <div class="container">
 
-      <?e simple:render("README.md") ?>
-
-      <?e article:test() ?>
+      <?e lists:map(fun(Article) -> "<h1>" ++ article:get_title(Article) ++ "</h1>" end, 
+            lists:map(fun(File) -> article:parse(File) end, 
+              filelib:wildcard("articles/*.md"))) ?>
 
     </div> <!-- /container -->
 

@@ -1,9 +1,9 @@
-Date: 2012-02-21
-Title: Emacs and Scheme on Mac OS X
-Slug: emacs-scheme
-Tags: emacs, scheme, mac
-Category: howto
-Abstract: Simple HOWTO for setting up Emacs Scheme environment on Mac OS X
+date: 2012-02-21
+title: Emacs and Scheme on Mac OS X
+slug: emacs-scheme
+tags: emacs, scheme, mac
+category: howto
+abstract: Simple HOWTO for setting up Emacs Scheme environment on Mac OS X
 
 First of all, we need to [download MIT Scheme](http://www.gnu.org/software/mit-scheme/) from official website and install it as usual Mac application.
 
