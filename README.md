@@ -1,8 +1,11 @@
-Erlang markdown blog engine
+Simple
 ===============
 
-[EHE](https://github.com/joearms/adapter_pattern) usage example.
-View the example at [http://simpler.herokuapp.com/index.ehe](http://simpler.herokuapp.com/index.ehe)
+Simple is a markdown blog engine.
+
+Build with [EHE and adapter_pattern](https://github.com/joearms/adapter_pattern) by Joe Armstrong, [erlang-yaml](https://github.com/bobsh/erlang-yaml) by bobsh and [erlmarkdown](https://github.com/gordonguthrie/erlmarkdown) by Gordon Guthrie.
+
+View the Simple usage example at [simpler.herokuapp.com](http://simpler.herokuapp.com)
 
 Download
 -----------
@@ -21,4 +24,4 @@ Usage
 
     erl -pa ebin deps/*/ebin -noshell -s simple_app
 
-View the site at [http://localhost:1234/index.ehe](http://localhost:1234/index.ehe)
+View the site at [http://localhost:1234](http://localhost:1234)

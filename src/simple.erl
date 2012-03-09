@@ -50,8 +50,9 @@ handle([], _, R) ->
   handle(["index.ehe"], [], R);
 
 handle([File], _, R) ->
-  case filelib:is_file(File) of 
-    true  -> R:send_file(File);
+  Filepath = "pages/" ++ File,
+  case filelib:is_file(Filepath) of 
+    true  -> R:send_file(Filepath);
 	  false -> R:send_data(html, R:pre({missing_file, File}))
   end;
 
