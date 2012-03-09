@@ -3,7 +3,7 @@
 -import(lists, [reverse/1]).
 
 start_link() ->
-  start([mochiweb_adapter]).
+  start([cowboy_adapter]).
 
 start([Mod]) ->
     Port = list_to_integer(os:getenv("PORT")),
@@ -18,6 +18,15 @@ start([Mod]) ->
 	end.
 
 % returns html for given markdown file
+% parse file
+% Date: 2012-12-21
+% Title: blahblah
+% Slug: url
+% Tags: tag1, tag2
+% Category: posts
+% Author: StepanKuzmin
+% Status: draft
+% settings.json!
 render(File) ->
   case file:read_file(File) of
     {ok, Data} -> markdown:conv(binary:bin_to_list(Data));
@@ -37,10 +46,13 @@ handle_request(R) ->
   io:format("Path=~p Args=~p~n",[Path, Args]),
   handle(Path, Args, R).
 
+handle([], _, R) ->
+  handle(["index.ehe"], [], R);
+
 handle([File], _, R) ->
   case filelib:is_file(File) of 
     true  -> R:send_file(File);
-	  false -> R:send_data(html, R:pre({missing_file,File}))
+	  false -> R:send_data(html, R:pre({missing_file, File}))
   end;
 
 handle(X, Args, R) ->
