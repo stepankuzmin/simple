@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Simple markdown blog engine.</title>
+    <title>Simpler markdown blog engine.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/">Simple</a>
+          <a class="brand" href="/">Simpler</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="index.ehe">Home</a></li>
@@ -56,14 +56,14 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1>Simplify your life!</h1>
-        <p>Simple is a markdown blog engine.</p>
+        <p>Simpler is a markdown blog engine.</p>
         <p><a href="about.ehe" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
       </div>
 
       <!-- Example row of columns -->
       <div class="row">
         <div class="span4">
-          <h2>Simple is free</h2>
+          <h2>Simpler is free</h2>
            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
        </div>
@@ -82,7 +82,7 @@
       <hr>
 
       <footer>
-        <p>Simple says: &#147;<?e Req:magic() ?>&#148;.</p>
+        <p>Simpler says: &#147;<?e Req:magic() ?>&#148;.</p>
       </footer>
 
     </div> <!-- /container -->
