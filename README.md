@@ -1,11 +1,11 @@
-Simple
+Simpler
 ===============
 
-Simple is a markdown blog engine.
+[Simpler](http://simpler.herokuapp.com) is a markdown blog engine.
 
-Build with [EHE and adapter_pattern](https://github.com/joearms/adapter_pattern) by Joe Armstrong, [erlang-yaml](https://github.com/bobsh/erlang-yaml) by bobsh and [erlmarkdown](https://github.com/gordonguthrie/erlmarkdown) by Gordon Guthrie.
+Build with [EHE and adapter_pattern](https://github.com/joearms/adapter_pattern) by Joe Armstrong and [erlmarkdown](https://github.com/gordonguthrie/erlmarkdown) by Gordon Guthrie.
 
-View the Simple usage example at [simpler.herokuapp.com](http://simpler.herokuapp.com)
+View the Simpler usage example at [stepan.herokuapp.com](http://stepan.herokuapp.com)
 
 Download
 -----------
