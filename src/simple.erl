@@ -17,16 +17,6 @@ start([Mod]) ->
 		void
 	end.
 
-% returns html for given markdown file
-% parse file
-% Date: 2012-12-21
-% Title: blahblah
-% Slug: url
-% Tags: tag1, tag2
-% Category: posts
-% Author: StepanKuzmin
-% Status: draft
-% settings.json!
 render(File) ->
   case file:read_file(File) of
     {ok, Data} -> markdown:conv(binary:bin_to_list(Data));

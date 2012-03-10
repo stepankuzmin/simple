@@ -53,7 +53,8 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="index.ehe">Home</a></li>
-              <li class="active"><a href="about.ehe">About</a></li>
+              <li class="active"><a href="blog.ehe">Blog</a></li>
+              <li><a href="about.ehe">About</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -62,9 +63,7 @@
 
     <div class="container">
 
-      <?e lists:map(fun(Article) -> article:render(Article) end, 
-            lists:map(fun(File) -> article:parse(File) end, 
-              filelib:wildcard("articles/*.md"))) ?>
+      <?e article:render_all() ?>
 
     </div> <!-- /container -->
 

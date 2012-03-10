@@ -4,6 +4,10 @@
 -record(article, {
 	  date,
 	  title,
+    slug,
+    tags,
+    category,
+    abstract,
 	  content}).
 
 get_date(Article) ->
@@ -12,17 +16,36 @@ get_date(Article) ->
 get_title(Article) ->
     Article#article.title.
 
+get_abstract(Article) ->
+    Article#article.abstract.
+
 get_content(Article) ->
     Article#article.content.
 
 set_attribute(Article, date, Date) -> Article#article{date = Date};
 set_attribute(Article, title, Title) -> Article#article{title = Title}; 
+set_attribute(Article, slug, Slug) -> Article#article{slug = Slug}; 
+set_attribute(Article, tags, Tags) -> Article#article{tags = Tags}; 
+set_attribute(Article, category, Category) -> Article#article{category = Category}; 
+set_attribute(Article, abstract, Abstract) -> Article#article{abstract = Abstract}; 
 set_attribute(Article, _, _) -> Article#article{}.
 
+render_all() -> 
+  "<ul>" ++ 
+    lists:map(fun(Article) -> 
+                "<li>" ++ article:render(Article) ++ "</li>" 
+              end, 
+              lists:map(fun(File) -> 
+                          article:parse(File) 
+                        end, 
+                        filelib:wildcard("articles/*.md"))) ++ 
+  "</ul>".
+
 render(Article) ->
-  ["<h1>" ++ get_title(Article) ++ "</h1>", 
-    "<strong>" ++ get_date(Article) ++ "</strong>",
-    "<p>" ++ get_content(Article) ++ "</p>"].
+  ["<i>" ++ get_date(Article) ++ "</i>", 
+    "<h2>" ++ get_title(Article) ++ "</h2>",
+    "<p>" ++ get_abstract(Article) ++ "</p>"
+  ].
 
 parse(File) ->
   case file:read_file(File) of
@@ -30,7 +53,7 @@ parse(File) ->
       Lines = re:split(Data, "\n"),
       {Meta, Content} = lists:splitwith(fun(C) -> C =/= <<>> end, Lines),
       MetaArticle = prepare(split(Meta)),
-      Article = MetaArticle#article{content = markdown:conv(lists:flatmap(fun(String) -> binary:bin_to_list(String) end, Content))},
+      Article = MetaArticle#article{content = markdown:conv(string:join(lists:map(fun(String) -> binary:bin_to_list(String) end, Content), "\n"))},
       Article;
     {error, Reason} -> case Reason of
         enoent -> "The file \"" ++ File ++ "\" does not exist.";
