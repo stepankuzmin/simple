@@ -21,4 +21,4 @@ Usage
 
     erl -pa ebin deps/*/ebin -noshell -s simple_app
 
-View the site at [http://localhost:8888]
+View the site at [http://localhost:8888](http://localhost:8888)
