@@ -1,4 +1,6 @@
 ebin
 deps
-articles/*
+*.auth
+*.access
+report.log
 erl_crash.dump

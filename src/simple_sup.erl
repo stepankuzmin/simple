@@ -1,6 +1,4 @@
-
 -module(simple_sup).
-
 -behaviour(supervisor).
 
 %% API
@@ -23,7 +21,6 @@ start_link() ->
 %% Supervisor callbacks
 %% ===================================================================
 
-init([]) ->
-  {ok, {{one_for_one, 1000, 3600}, [
-    {simple, {simple, start_link, []}, permanent, 2000, worker, [simple]}
-  ]}}.
+init(_Args) -> 
+  Simple = {simple, {simple, start_link,[]}, permanent, 2000, worker, [simple]},
+  {ok, {{one_for_all, 0, 1}, [Simple]}}.
