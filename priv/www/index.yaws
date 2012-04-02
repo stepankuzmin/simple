@@ -1,0 +1,12 @@
+<html>
+
+
+<h1>Simple</h1>
+
+<a href="/dropbox.yaws">Log-in with Dropbox account</a>
+
+<erl>
+  out(Arg) -> {html, f("Printing the arg structure :" "~n<pre>~p~n</pre>~n", [Arg])}. 
+</erl>
+
+</html>

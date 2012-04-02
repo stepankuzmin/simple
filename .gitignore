@@ -1,4 +1,5 @@
-ebin
+ebin/*.beam
+src/*.swp
 deps
 *.auth
 *.access
