@@ -1,12 +1,101 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <!-- Le styles -->
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
 
-<h1>Simple</h1>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-<a href="/dropbox.yaws">Log-in with Dropbox account</a>
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
 
-<erl>
-  out(Arg) -> {html, f("Printing the arg structure :" "~n<pre>~p~n</pre>~n", [Arg])}. 
-</erl>
+  <body>
 
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Simple</h1>
+        <p>For those, who love Markdown and Dropbox</p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4">
+          <h2>1. Sign up</h2>
+          <p>
+          <form class="well form-inline">
+            <input type="text" class="input-small" placeholder="Username">
+            <button type="submit" class="btn">Sign up</button>
+            <hr />
+              <p><a class="btn" href="/blog/login">Dropbox Login</a></p>
+          </form>
+         </p>
+        </div>
+        <div class="span4">
+          <h2>2. Configure</h2>
+          <p>
+          <form class="well disabled" disabled>
+            <label>Site Title</label>
+            <input type="text" class="span3 disabled input-small" disabled>
+            <label>Twitter (for an avatar and Follow button)</label>
+            <input type="text" class="span3 disabled input-small" disabled>
+            <button type="submit" class="btn disabled" disabled>Submit</button>
+          </form>
+          </p>
+       </div>
+        <div class="span4">
+          <h2>3. Publish</h2>
+          <form class="well disabled" disabled>
+            <button type="submit" class="btn disabled" disabled>Publish</button>
+          </form>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Stepan Kuzmin 2012</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-transition.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-alert.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-modal.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tab.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tooltip.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-popover.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-button.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-carousel.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
 </html>
