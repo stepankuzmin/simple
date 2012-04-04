@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Simple by StepanKuzmin</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Simple</h1>
+        <p>Erlang markdown blog engine</p>
+        <p class="view"><a href="https://github.com/StepanKuzmin/simple">View the Project on GitHub <small>StepanKuzmin/simple</small></a></p>
+        <ul>
+          <li><a href="https://github.com/StepanKuzmin/simple/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/StepanKuzmin/simple/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/StepanKuzmin/simple">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>Simple</h3>
+
+<p>Simple is a markdown blog engine.</p>
+
+<h3>Download</h3>
+
+<pre><code>git clone git://github.com/StepanKuzmin/simple.git
+</code></pre>
+
+<h3>Install</h3>
+
+<pre><code>cd simple
+rebar get-deps
+rebar compile
+</code></pre>
+
+<h3>Usage</h3>
+
+<pre><code>erl -pa ebin deps/*/ebin -noshell \
+-s crypto -s inets -s ssl -s mnesia -s simple_app
+</code></pre>
+
+<p>View the site at <a href="http://localhost:8888">http://localhost:8888</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/StepanKuzmin">StepanKuzmin</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>
