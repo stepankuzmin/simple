@@ -15,6 +15,7 @@ box(Str) ->
 out(Arg) -> 
   case Arg#arg.appmoddata of
     %% "" -> list(Arg);
+    "create/stepan" -> create(Arg);
     "login" -> signup(Arg);
     "account/info" -> account_info(Arg);
       _ ->
@@ -30,11 +31,14 @@ out(Arg) ->
 
 %% ROUTES
 
+create(_Arg) ->
+  simple:start("stepan"),
+  {redirect, "http://stepan:8888/"}.
+
 signup(_Arg) ->
   [{"oauth_token_secret", TokenSecret}, {"oauth_token", Token}] = dropbox:request_token(?KEY, ?SECRET),
   mnesia:transaction(fun() -> mnesia:write(#token{token=Token, tokensecret=TokenSecret}) end),
-  [{_, Link}] = dropbox:authorize(?KEY, ?SECRET, Token, TokenSecret, "http://localhost:8888/blog/account/info"),
-  {redirect, Link}.
+  {redirect, "https://www.dropbox.com/1/oauth/authorize?oauth_token=" ++ Token ++ "&oauth_callback=http://localhost:8888/blog/account/info"}.
 
 account_info(Arg) ->
   [{"uid", _Uid}, {"oauth_token", Token}] = yaws_api:parse_query(Arg),
