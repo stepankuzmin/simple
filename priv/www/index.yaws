@@ -66,9 +66,11 @@
        </div>
         <div class="span4">
           <h2>3. Publish</h2>
-          <form class="well disabled" disabled>
-            <button type="submit" class="btn disabled" disabled>Publish</button>
-          </form>
+          <p>
+            <form class="well disabled" disabled>
+              <button type="submit" class="btn disabled" disabled>Publish</button>
+            </form>
+          </p>
         </div>
       </div>
 

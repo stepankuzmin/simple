@@ -5,4 +5,4 @@
               {applications,[kernel,stdlib]},
               {mod,{simple_app,[]}},
               {env,[]},
-              {modules,[article,blog,simple,simple_app,simple_sup]}]}.
+              {modules,[article,simple,simple_app,simple_sup]}]}.
